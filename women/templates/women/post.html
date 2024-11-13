@@ -1,0 +1,23 @@
+{% extends 'women/base.html' %}
+
+{% block content %}
+  <h1>{{ post.title }}</h1>
+
+  {% if post.photo %}
+    <p><img class="img-article-left" src="{{ post.photo.url }}"></p>
+  {% endif %}
+
+  {% if post.video %}
+  <!-- Код для отображения видео здесь -->
+  <video width="560" height="315" controls>
+    <source src="{{ post.video.url }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  {% else %}
+  <div id="non-video"></div>
+{% endif %}
+
+
+  {{ post.content|linebreaks }}
+{% endblock %}
+

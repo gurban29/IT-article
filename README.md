@@ -4,7 +4,7 @@
 On Windows:
 python -m venv venv
 
-On On macOS/Linux:
+On macOS/Linux:
 python3 -m venv venv
 
 # 2. Activate the Virtual Environment

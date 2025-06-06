@@ -1,0 +1,333 @@
+/* Сброс стилей и базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb;
+    color: whitesmoke;
+    height: 100%;
+    width: 100%;
+}
+
+/* Контейнер для контента */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: #343a40;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px gray;
+}
+
+.header .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo a {
+    color: #f8f9fa  ;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.header .logo a:hover {
+    color: gray;
+}
+
+.header nav {
+    flex: 1;
+    text-align: right;
+}
+
+.header .mainmenu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header .mainmenu li {
+    margin-left: 30px;
+}
+
+.header .mainmenu li a {
+    color: #f8f9fa;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header .mainmenu li a:hover {
+    color: gray;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 230px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-right: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .categories {
+    list-style: none;
+}
+
+.sidebar .categories li {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.sidebar .categories li a {
+    color: #444;
+    font-weight: 600;
+}
+
+.sidebar .categories li.selected,
+.sidebar .categories li a:hover {
+    color: #1d72b8;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.content-text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+    padding-right: 20px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    padding: 30px;
+}
+
+/* Стиль для формы */
+.form {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 32px;
+    color: #444;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Основные стили для формы */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form input,
+.form select,
+.form textarea,
+.form button {
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    background: #f9f9f9;
+    color: #333;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+    border-color: #1d72b8;
+    outline: none;
+}
+
+/* Ошибки формы */
+.form-error {
+    font-size: 14px;
+    color: #cc0000;
+    margin-top: 5px;
+}
+
+/* Кнопка отправки */
+.btn-submit {
+    background-color: #1d72b8;
+    color: white;
+    padding: 14px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-submit:hover {
+    background-color: #d9534f;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.pagination ul {
+    list-style: none;
+    display: inline-flex;
+}
+
+.pagination li {
+    margin: 0 10px;
+}
+
+.pagination li a {
+    color: #444;
+    font-size: 18px;
+    padding: 10px 16px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.pagination li a:hover {
+    background-color: #e9ecef;
+}
+
+/* Выделение активной страницы синим цветом */
+.pagination .active a {
+    background-color: #1d72b8;
+    color: white;
+    border-color: #1d72b8;
+    font-weight: bold;
+}
+
+.pagination .active a:hover {
+    background-color: #1a659d;
+}
+
+
+/* Footer */
+#footer {
+    background: #343a40;
+    color: #f8f9fa;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+#footer a {
+    color: #f8f9fa;
+    text-decoration: underline;
+}
+
+/* Респонсивность */
+@media (max-width: 768px) {
+    .header .header-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header .mainmenu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .mainmenu li {
+        margin: 10px 0;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .content-text {
+        padding-right: 0;
+    }
+
+    .form {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+/* Кнопка "Читать пост" */
+.link-read-post {
+    display: inline-block;
+    background-color: #1d72b8; /* основной цвет фона */
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 1px solid #1d72b8;
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: all 0.3s ease;
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Эффект при наведении на ссылку */
+.link-read-post:hover {
+    background-color: #155a8a; /* затемненный цвет фона */
+    border-color: #155a8a; /* затемненная рамка */
+    color: #fff; /* белый цвет текста */
+}
+
+/* Добавление иконки справа от текста */
+.link-read-post::after {
+    content: "→"; /* Стрелка */
+    font-size: 18px;
+    margin-left: 10px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+/* Эффект при наведении на ссылку с иконкой */
+.link-read-post:hover::after {
+    transform: translateX(5px); /* Стрелка движется вправо */
+}

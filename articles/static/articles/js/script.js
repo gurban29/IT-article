@@ -1,0 +1,1 @@
+document.getElementById("non-video").remove();
